@@ -1,0 +1,10 @@
+<!-- rich_cafe.html -->
+<h1>카페</h1>
+{% for lion in lions %}
+    <h3>카테고리 : {{ lion.name }}</h3>
+    {% for item in lion.item_set.all %}
+        <p>
+            음료이름: {{ item.name }}</a> 가격: {{ item.price }}
+        </p>
+    {% endfor %}
+{% endfor %}
